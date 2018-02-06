@@ -5,20 +5,17 @@ import time
 import random
 from matplotlib import pyplot as plt
 
-img = cv.imread("0.png")
+img = cv.imread("1.png")
 
 w, h, c = img.shape
-
-img[0, 0] = [255, 255, 255]
-
 
 print("width = {}, height = {}".format(w, h))
 
 y = 0
-while y < h:
+while y < h / 2:
     x = 0
-    while x < w:
-        img[x, y] = [0, 0, 0]
+    while x < w / 2:
+        img[x, y] = [255, 255, 255]
         x += 1
     y += 1
 
